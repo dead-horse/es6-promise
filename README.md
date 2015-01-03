@@ -5,7 +5,6 @@ es6-promise
 [![Test coverage][coveralls-image]][coveralls-url]
 [![David deps][david-image]][david-url]
 [![node version][node-image]][node-url]
-[![Gittip][gittip-image]][gittip-url]
 
 [travis-image]: https://img.shields.io/travis/dead-horse/es6-promise.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dead-horse/es6-promise
