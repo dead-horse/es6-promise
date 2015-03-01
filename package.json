@@ -6,9 +6,7 @@
   "scripts": {
     "test": "make test"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "author": {
     "name": "dead-horse",
     "email": "dead_horse@qq.com",
@@ -19,11 +17,10 @@
     "url": "git@github.com:dead-horse/es6-promise"
   },
   "license": "MIT",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
-    "autod": "2"
+    "autod": "2",
+    "babel": "~4.6.3"
   },
   "engine": {
     "node": ">=0.10"

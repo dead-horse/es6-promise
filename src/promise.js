@@ -306,6 +306,22 @@ Promise.prototype.catch = function (onRejected) {
   return this.then(undefined, onRejected);
 };
 
+Promise.all = function (iterable) {
+  var promiseCapability = newPromiseCapability(this);
+
+  var values = [];
+  var remainingElementsCount = 1;
+  var index = 0;
+
+  return promiseCapability.promise;
+}
+
+Promise.reject = function (r) {
+  var promiseCapability = newPromiseCapability(this);
+  promiseCapability.reject(r);
+  return promiseCapability.promise;
+};
+
 /**
  * 25.4.1.5 http://people.mozilla.org/~jorendorff/es6-draft.html#sec-newpromisecapability
  *

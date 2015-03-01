@@ -62,3 +62,28 @@ exports.noop = function () {};
 exports.Call = function (F, V, args) {
   F.apply(V, args);
 };
+
+exports.iterator = function (iterable, fn) {
+  var method = iterable['@@iterator'];
+  if (!method) {
+    if (iterable.length === undefined) throw new TypeError('not iterable');
+    for (var i = 0; i < iterable.length; i++) {
+      fn(iterable[i]);
+    }
+    return;
+  }
+
+  var iterator = method();
+  if (typeof iterator !== 'object') throw new TypeError('iterator not an object');
+  var ret;
+  while (!(ret = iterator.next()).done) fn(ret.value);
+};
+
+exports.isObejct = function (val) {
+  var type = typeof val;
+  return type === 'object' || type === 'function';
+};
+
+exports.isPromise = function (val) {
+  return exports.isObejct && val.hasOwnProperty('_state');
+}
